@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.InventarioController">
+    <center>
+        <TableView fx:id="tablaProductos">
+            <columns>
+                <TableColumn text="Nombre" fx:id="colNombre" />
+                <TableColumn text="Cantidad" fx:id="colCantidad" />
+                <TableColumn text="Vencimiento" fx:id="colVencimiento" />
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox spacing="10">
+            <padding>
+                <Insets top="10" right="0" bottom="10" left="0"/>
+            </padding>
+            <Button text="Agregar" onAction="#onAgregar"/>
+            <Button text="Eliminar" onAction="#onEliminar"/>
+            <Button text="Buscar" onAction="#onBuscar"/>
+            <Button text="Guardar" onAction="#onGuardar"/>
+        </HBox>
+    </bottom>
+</BorderPane>

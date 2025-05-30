@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.AgregarProductoController">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <Label text="Agregar Producto" style="-fx-font-size: 16px; -fx-font-weight: bold"/>
+
+    <TextField fx:id="txtNombre" promptText="Nombre del producto"/>
+    <TextField fx:id="txtCantidad" promptText="Cantidad"/>
+
+    <CheckBox fx:id="chkPerecedero" text="¿Es perecedero?"/>
+    <DatePicker fx:id="dateVencimiento" promptText="Fecha de vencimiento"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Guardar" onAction="#guardarProducto" fx:id="btnguardar" />
+        <Button text="Cancelar" onAction="#cancelar"/>
+    </HBox>
+</VBox>
